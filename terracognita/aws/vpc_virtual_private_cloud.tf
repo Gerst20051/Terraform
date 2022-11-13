@@ -32,7 +32,7 @@ resource "aws_security_group" "sg_2d9c1c49" {
 }
 
 resource "aws_subnet" "subnet_0119790d" {
-  availability_zone_id                = "use1-az5"
+  availability_zone                   = "us-east-1f"
   cidr_block                          = "172.31.80.0/20"
   map_public_ip_on_launch             = true
   private_dns_hostname_type_on_launch = "ip-name"
@@ -40,7 +40,7 @@ resource "aws_subnet" "subnet_0119790d" {
 }
 
 resource "aws_subnet" "subnet_0decae37" {
-  availability_zone_id                = "use1-az3"
+  availability_zone                   = "us-east-1e"
   cidr_block                          = "172.31.0.0/20"
   map_public_ip_on_launch             = true
   private_dns_hostname_type_on_launch = "ip-name"
@@ -48,7 +48,7 @@ resource "aws_subnet" "subnet_0decae37" {
 }
 
 resource "aws_subnet" "subnet_2faeda4a" {
-  availability_zone_id                = "use1-az1"
+  availability_zone                   = "us-east-1d"
   cidr_block                          = "172.31.64.0/20"
   map_public_ip_on_launch             = true
   private_dns_hostname_type_on_launch = "ip-name"
@@ -56,7 +56,7 @@ resource "aws_subnet" "subnet_2faeda4a" {
 }
 
 resource "aws_subnet" "subnet_5b4cf502" {
-  availability_zone_id                = "use1-az6"
+  availability_zone                   = "us-east-1c"
   cidr_block                          = "172.31.16.0/20"
   map_public_ip_on_launch             = true
   private_dns_hostname_type_on_launch = "ip-name"

@@ -41,8 +41,8 @@ resource "aws_iam_group_policy_attachment" "administrators_arn_aws_iam__aws_poli
 }
 
 resource "aws_iam_group_policy_attachment" "developers_arn_aws_iam__230478805928_policy_developers" {
-  group      = aws_iam_policy.arn_aws_iam__230478805928_policy_developers.name
-  policy_arn = "arn:aws:iam::230478805928:policy/Developers"
+  group      = "Developers"
+  policy_arn = aws_iam_policy.arn_aws_iam__230478805928_policy_developers.id
 }
 
 resource "aws_iam_policy" "arn_aws_iam__230478805928_policy_developers" {
