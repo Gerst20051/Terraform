@@ -25,6 +25,19 @@ resource "aws_security_group" "instance" {
   }
 }
 
+resource "aws_route53_record" "www" {
+  zone_id = var.route53_zone_id
+  name    = "exampleinstance.hnswave.co"
+  type    = "A"
+  ttl     = 300
+  records = [aws_instance.example.public_ip]
+}
+
+variable "route53_zone_id" {
+  description = "The ID of the Route 53 hosted zone created outside of terraform"
+  default     = "Z108GQGBXS4JSX"
+}
+
 variable "server_port" {
   description = "The port the server will use for HTTP requests"
   type        = number
